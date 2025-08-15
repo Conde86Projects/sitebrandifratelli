@@ -1,22 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Brandi Fratelli - Licitações, Advocacia e Sistemas',
-  description: 'Empresa especializada em licitações governamentais, advocacia empresarial e desenvolvimento de sistemas personalizados.',
-  keywords: 'licitações, advocacia, sistemas, desenvolvimento, software, direito empresarial',
-  authors: [{ name: 'Brandi Fratelli' }],
-  openGraph: {
-    title: 'Brandi Fratelli',
-    description: 'Especialistas em licitações, advocacia e sistemas',
-    url: 'https://brandifratelli.com.br',
-    siteName: 'Brandi Fratelli',
-    locale: 'pt_BR',
-    type: 'website',
-  },
+  title: 'Brandi Fratelli - Licitações, Sistemas e Advocacia',
+  description: 'Especialistas em licitações governamentais, desenvolvimento de sistemas e serviços jurídicos especializados.',
+  keywords: 'licitações, sistemas, advocacia, governo, flutter, aplicativos',
 }
 
 export default function RootLayout({
@@ -27,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        {children}
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

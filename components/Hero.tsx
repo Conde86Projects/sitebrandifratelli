@@ -1,64 +1,77 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { ArrowRight, Scale, Code, Smartphone } from 'lucide-react'
 import Link from 'next/link'
-import { ArrowRight, Award, Users, Target } from 'lucide-react'
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-brandi-blue to-blue-900 text-white">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Brandi Fratelli
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Especialistas em licitações governamentais, advocacia empresarial e desenvolvimento de sistemas personalizados
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/contato"
-              className="bg-brandi-gold hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-            >
-              Fale Conosco
-              <ArrowRight size={20} />
-            </Link>
-            <Link
-              href="/licitacoes"
-              className="border-2 border-white hover:bg-white hover:text-brandi-blue text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Saiba Mais
-            </Link>
-          </div>
+    <section className="pt-20 pb-16 bg-gradient-to-br from-brandi-light to-white">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl lg:text-6xl font-bold text-brandi-dark mb-6">
+              <span className="gradient-text">Brandi Fratelli</span>
+              <br />
+              Excelência em Negócios
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Especialistas em licitações governamentais, desenvolvimento de sistemas 
+              inovadores e serviços jurídicos especializados. Dois irmãos unidos pela 
+              paixão em transformar ideias em soluções.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contato"
+                className="bg-brandi-blue text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center group"
+              >
+                Fale Conosco
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              </Link>
+              <Link
+                href="/licitacoes"
+                className="border-2 border-brandi-blue text-brandi-blue px-8 py-4 rounded-lg hover:bg-brandi-blue hover:text-white transition-colors duration-200 text-center"
+              >
+                Conheça Nossos Serviços
+              </Link>
+            </div>
+          </motion.div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award size={32} className="text-brandi-gold" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">500+</h3>
-              <p className="text-blue-100">Licitações Vencidas</p>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Scale className="text-brandi-blue mb-4" size={40} />
+              <h3 className="text-xl font-semibold mb-2">Licitações Públicas</h3>
+              <p className="text-gray-600">Especialistas em pregões e concorrências governamentais</p>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users size={32} className="text-brandi-gold" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">200+</h3>
-              <p className="text-blue-100">Clientes Atendidos</p>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Scale className="text-brandi-blue mb-4" size={40} />
+              <h3 className="text-xl font-semibold mb-2">Advocacia Empresarial</h3>
+              <p className="text-gray-600">Direito empresarial e consultoria jurídica corporativa</p>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Target size={32} className="text-brandi-gold" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">15+</h3>
-              <p className="text-blue-100">Anos de Experiência</p>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Code className="text-brandi-gold mb-4" size={40} />
+              <h3 className="text-xl font-semibold mb-2">Sistemas Corporativos</h3>
+              <p className="text-gray-600">Desenvolvimento de soluções tecnológicas empresariais</p>
             </div>
-          </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Smartphone className="text-brandi-gold mb-4" size={40} />
+              <h3 className="text-xl font-semibold mb-2">Brandi Labs</h3>
+              <p className="text-gray-600">Aplicativos Flutter de alta qualidade</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   )
 }
+
+export default Hero
