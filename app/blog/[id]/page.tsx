@@ -1,13 +1,13 @@
 'use client'
 
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, Share2, Heart, MessageCircle, Tag } from 'lucide-react'
-import { useState } from 'react'
 
 // Mock data - em produção viria de um CMS ou API
 const getBlogPost = (id: string) => {
-  const posts = {
+  const posts: { [key: string]: any } = {
     '1': {
       id: 1,
       title: 'Como Vencer Licitações: Guia Completo 2024',
@@ -43,31 +43,13 @@ const getBlogPost = (id: string) => {
         <h2>3. Estratégias de Precificação</h2>
         <p>A formação de preços é crucial para o sucesso. Não adianta ter o menor preço se não conseguir executar o contrato com qualidade e lucratividade.</p>
         
-        <h3>Dicas para Precificação:</h3>
-        <ul>
-          <li>Calcule todos os custos diretos e indiretos</li>
-          <li>Considere impostos e taxas</li>
-          <li>Inclua margem de segurança para imprevistos</li>
-          <li>Analise a concorrência</li>
-          <li>Verifique a viabilidade econômica</li>
-        </ul>
-        
-        <h2>4. Acompanhamento do Processo</h2>
-        <p>Após a entrega da proposta, é importante acompanhar todo o processo licitatório, desde a abertura das propostas até a homologação.</p>
-        
-        <h2>5. Recursos e Impugnações</h2>
-        <p>Conhecer os prazos e procedimentos para recursos é fundamental. Muitas vezes, uma licitação pode ser revertida através de um recurso bem fundamentado.</p>
-        
         <h2>Conclusão</h2>
         <p>Vencer licitações requer preparação, conhecimento técnico e estratégia. Com as dicas apresentadas neste guia, sua empresa estará mais preparada para competir com sucesso no mercado de licitações públicas.</p>
-        
-        <p>Lembre-se: cada licitação é uma oportunidade de aprendizado. Mesmo quando não vencer, analise os motivos e use essa experiência para melhorar nas próximas participações.</p>
       `,
       author: 'Brandi Fratelli Licitações',
       date: '2024-01-15',
       category: 'Licitações',
       readTime: '8 min',
-      image: '/blog/licitacoes-2024.jpg',
       tags: ['Licitações', 'Pregões', 'Estratégia', 'Documentação']
     },
     '2': {
@@ -87,41 +69,18 @@ const getBlogPost = (id: string) => {
           <li><strong>Hot Reload:</strong> Desenvolvimento mais rápido com atualizações instantâneas</li>
           <li><strong>Widgets customizáveis:</strong> Interface totalmente personalizável</li>
           <li><strong>Dart:</strong> Linguagem moderna e fácil de aprender</li>
-          <li><strong>Suporte Google:</strong> Backing forte e atualizações constantes</li>
         </ul>
         
         <h2>React Native: A Solução do Facebook</h2>
         <p>React Native permite usar React para criar aplicativos mobile nativos, aproveitando o conhecimento existente em desenvolvimento web.</p>
         
-        <h3>Vantagens do React Native:</h3>
-        <ul>
-          <li><strong>JavaScript:</strong> Linguagem amplamente conhecida</li>
-          <li><strong>Reutilização de código:</strong> Compartilhamento com projetos web React</li>
-          <li><strong>Comunidade:</strong> Ecossistema maduro e grande comunidade</li>
-          <li><strong>Componentes nativos:</strong> Acesso direto a componentes nativos</li>
-          <li><strong>Flexibilidade:</strong> Fácil integração com código nativo</li>
-        </ul>
-        
-        <h2>Comparação Técnica</h2>
-        
-        <h3>Performance:</h3>
-        <p><strong>Flutter:</strong> Performance superior devido à compilação direta para código nativo.</p>
-        <p><strong>React Native:</strong> Boa performance, mas pode ter limitações em aplicações complexas.</p>
-        
-        <h3>Curva de Aprendizado:</h3>
-        <p><strong>Flutter:</strong> Requer aprender Dart, mas a curva é suave.</p>
-        <p><strong>React Native:</strong> Mais fácil para desenvolvedores JavaScript/React.</p>
-        
         <h2>Conclusão</h2>
         <p>Ambas as tecnologias são excelentes escolhas. A decisão deve ser baseada nas necessidades específicas do projeto, experiência da equipe e objetivos de longo prazo.</p>
-        
-        <p>Na Brandi Labs, temos experiência com ambas as tecnologias e podemos ajudar você a escolher a melhor opção para seu projeto.</p>
       `,
       author: 'Brandi Labs',
       date: '2024-01-10',
       category: 'Tecnologia',
       readTime: '12 min',
-      image: '/blog/flutter-vs-react.jpg',
       tags: ['Flutter', 'React Native', 'Mobile', 'Desenvolvimento']
     },
     '3': {
@@ -130,26 +89,14 @@ const getBlogPost = (id: string) => {
       excerpt: 'Como a tecnologia está transformando a prática jurídica e aumentando a eficiência dos escritórios.',
       content: `
         <h2>A Revolução Digital no Direito</h2>
-        <p>O setor jurídico está passando por uma transformação digital sem precedentes. A automação de processos não é mais uma tendência futura, mas uma realidade presente que está revolucionando a forma como os escritórios de advocacia operam.</p>
+        <p>O setor jurídico está passando por uma transformação digital sem precedentes. A automação de processos não é mais uma tendência futura, mas uma realidade presente.</p>
         
         <h2>Principais Áreas de Automação</h2>
-        
         <h3>1. Gestão de Prazos</h3>
         <p>Sistemas automatizados podem monitorar prazos processuais, enviar alertas e até mesmo gerar petições automáticas para evitar preclusões.</p>
         
         <h3>2. Análise de Contratos</h3>
         <p>Inteligência artificial pode revisar contratos, identificar cláusulas problemáticas e sugerir melhorias em questão de minutos.</p>
-        
-        <h3>3. Pesquisa Jurisprudencial</h3>
-        <p>Algoritmos avançados podem pesquisar milhares de decisões judiciais e encontrar precedentes relevantes automaticamente.</p>
-        
-        <h2>Benefícios da Automação</h2>
-        <ul>
-          <li><strong>Redução de Erros:</strong> Sistemas automatizados eliminam falhas humanas em tarefas repetitivas</li>
-          <li><strong>Aumento da Produtividade:</strong> Advogados podem focar em atividades estratégicas</li>
-          <li><strong>Redução de Custos:</strong> Menos tempo gasto em tarefas administrativas</li>
-          <li><strong>Melhor Atendimento:</strong> Clientes recebem respostas mais rápidas e precisas</li>
-        </ul>
         
         <h2>O Futuro da Advocacia</h2>
         <p>Escritórios que abraçarem a automação terão vantagem competitiva significativa. A tecnologia não substitui o advogado, mas potencializa suas capacidades.</p>
@@ -158,15 +105,18 @@ const getBlogPost = (id: string) => {
       date: '2024-01-05',
       category: 'Jurídico',
       readTime: '6 min',
-      image: '/blog/automacao-juridica.jpg',
       tags: ['Automação', 'Tecnologia', 'Direito', 'Inovação']
     }
   }
   
-  return posts[id as keyof typeof posts] || null
+  return posts[id] || null
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+interface BlogPostPageProps {
+  params: { id: string }
+}
+
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   const [liked, setLiked] = useState(false)
   const [likes, setLikes] = useState(42)
   const [comments, setComments] = useState([
@@ -297,7 +247,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                     Tags
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
+                    {post.tags.map((tag: string) => (
                       <span
                         key={tag}
                         className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-brandi-blue hover:text-white transition-colors cursor-pointer"
@@ -414,21 +364,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                       Equipe especializada da Brandi Fratelli com anos de experiência 
                       em licitações, advocacia e tecnologia.
                     </p>
-                  </div>
-
-                  {/* Related Posts */}
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <h4 className="font-semibold mb-4">Posts Relacionados</h4>
-                    <div className="space-y-4">
-                      <Link href="/blog/2" className="block hover:text-brandi-blue transition-colors">
-                        <h5 className="font-medium text-sm mb-1">Flutter vs React Native: Qual Escolher?</h5>
-                        <p className="text-xs text-gray-600">12 min de leitura</p>
-                      </Link>
-                      <Link href="/blog/3" className="block hover:text-brandi-blue transition-colors">
-                        <h5 className="font-medium text-sm mb-1">Automação de Processos Jurídicos</h5>
-                        <p className="text-xs text-gray-600">6 min de leitura</p>
-                      </Link>
-                    </div>
                   </div>
 
                   {/* Newsletter */}
