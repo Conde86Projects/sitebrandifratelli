@@ -10,8 +10,8 @@ const services = [
     color: 'from-blue-500 to-blue-600'
   },
   {
-    title: 'Advocacia Empresarial',
-    description: 'Direito empresarial, contratos comerciais e consultoria jurídica especializada.',
+    title: 'Direito Previdenciário',
+    description: 'Especialistas em aposentadorias, benefícios INSS, pensões e planejamento previdenciário.',
     icon: Scale,
     href: '/advocacia',
     color: 'from-green-500 to-green-600'

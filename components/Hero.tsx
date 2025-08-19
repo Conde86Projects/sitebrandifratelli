@@ -54,8 +54,8 @@ const Hero = () => {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Scale className="text-brandi-blue mb-4" size={40} />
-              <h3 className="text-xl font-semibold mb-2">Advocacia Empresarial</h3>
-              <p className="text-gray-600">Direito empresarial e consultoria jurídica corporativa</p>
+              <h3 className="text-xl font-semibold mb-2">Direito Previdenciário</h3>
+                <p className="text-gray-600">Aposentadorias, benefícios INSS e planejamento previdenciário</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Code className="text-brandi-gold mb-4" size={40} />

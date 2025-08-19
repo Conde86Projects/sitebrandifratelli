@@ -5,52 +5,52 @@ import { Scale, FileText, Users, Award, CheckCircle, Building, Briefcase, Shield
 
 export default function AdvocaciaPage() {
   const services = [
-    'Direito Empresarial',
-    'Contratos Comerciais',
-    'Consultoria Jurídica Corporativa',
-    'Direito Trabalhista',
-    'Direito Tributário',
-    'Compliance Empresarial',
-    'Recuperação Judicial',
-    'Propriedade Intelectual'
+    'Aposentadorias (Idade, Tempo, Especial, Invalidez)',
+    'Benefícios por Incapacidade (Auxílio-doença, Auxílio-acidente)',
+    'Pensão por Morte',
+    'Revisão de Benefícios Previdenciários',
+    'Planejamento Previdenciário',
+    'Recursos Administrativos e Judiciais',
+    'Auxílio-Reclusão e Salário-Maternidade',
+    'Benefício Assistencial (LOAS)'
   ]
 
   const expertise = [
     {
       icon: Building,
-      title: 'Direito Empresarial',
-      description: 'Assessoria completa para empresas de todos os portes',
-      areas: ['Constituição de Empresas', 'Fusões e Aquisições', 'Governança Corporativa']
+      title: 'Aposentadorias',
+      description: 'Análise e acompanhamento de todos os tipos de aposentadoria',
+      areas: ['Aposentadoria por Idade', 'Aposentadoria por Tempo de Contribuição', 'Aposentadoria Especial', 'Aposentadoria por Invalidez']
     },
     {
       icon: FileText,
-      title: 'Contratos',
-      description: 'Elaboração e revisão de contratos comerciais complexos',
-      areas: ['Contratos de Fornecimento', 'Parcerias Comerciais', 'Acordos Internacionais']
+      title: 'Benefícios por Incapacidade',
+      description: 'Assessoria completa em benefícios relacionados à incapacidade',
+      areas: ['Auxílio-doença', 'Auxílio-acidente', 'Aposentadoria por Invalidez', 'Análise Médica Pericial']
     },
     {
       icon: Shield,
-      title: 'Compliance',
-      description: 'Programas de conformidade e gestão de riscos',
-      areas: ['LGPD', 'Anticorrupção', 'Auditoria Jurídica']
+      title: 'Planejamento e Revisão',
+      description: 'Estratégias para otimização de benefícios previdenciários',
+      areas: ['Planejamento Previdenciário', 'Revisão de Benefícios', 'Recursos Administrativos', 'Ações Judiciais']
     }
   ]
 
   const cases = [
     {
-      title: 'Recuperação Judicial - Indústria',
-      description: 'Assessoria em processo de recuperação judicial de grande empresa industrial',
-      result: 'Plano aprovado - Empresa reestruturada'
+      title: 'Aposentadoria Especial - Enfermeiro',
+      description: 'Reconhecimento de atividade especial e concessão de aposentadoria especial',
+      result: 'Benefício concedido - 25 anos de contribuição'
     },
     {
-      title: 'Fusão Empresarial',
-      description: 'Assessoria jurídica completa em fusão de duas empresas do setor tecnológico',
-      result: 'Operação concluída com sucesso'
+      title: 'Revisão de Aposentadoria',
+      description: 'Revisão de cálculo de aposentadoria com inclusão de períodos não computados',
+      result: 'Aumento de 40% no valor do benefício'
     },
     {
-      title: 'Compliance LGPD',
-      description: 'Implementação de programa de conformidade com a Lei Geral de Proteção de Dados',
-      result: 'Empresa 100% adequada à LGPD'
+      title: 'Auxílio-doença Negado',
+      description: 'Recurso administrativo e ação judicial para concessão de auxílio-doença',
+      result: 'Benefício concedido com pagamento retroativo'
     }
   ]
 
@@ -70,8 +70,9 @@ export default function AdvocaciaPage() {
               Brandi Fratelli <span className="gradient-text">Advocacia</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Escritório de advocacia especializado em direito empresarial, contratos comerciais 
-              e consultoria jurídica corporativa. Soluções jurídicas estratégicas para o seu negócio.
+              Escritório especializado em Direito Previdenciário. Assessoria completa em aposentadorias, 
+              benefícios por incapacidade, pensões e planejamento previdenciário. Defendemos seus direitos 
+              perante o INSS com expertise e dedicação.
             </p>
           </motion.div>
         </div>
@@ -87,11 +88,11 @@ export default function AdvocaciaPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-brandi-dark mb-4">
-              Nossas Especialidades
+              Especialidades em Direito Previdenciário
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Oferecemos assessoria jurídica completa para empresas, com foco em 
-              soluções estratégicas e preventivas para o seu negócio.
+              Oferecemos assessoria jurídica especializada em Direito Previdenciário, 
+              com foco na defesa dos seus direitos e na obtenção dos melhores benefícios.
             </p>
           </motion.div>
 

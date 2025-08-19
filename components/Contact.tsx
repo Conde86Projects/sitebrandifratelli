@@ -181,7 +181,7 @@ export default function Contact() {
                 >
                   <option value="">Selecione um serviço</option>
                   <option value="licitacoes">Licitações Governamentais</option>
-                  <option value="advocacia">Advocacia Empresarial</option>
+                  <option value="advocacia">Direito Previdenciário</option>
                   <option value="sistemas">Desenvolvimento de Sistemas</option>
                   <option value="brandi-labs">Brandi Labs (Apps Flutter)</option>
                   <option value="outro">Outro</option>

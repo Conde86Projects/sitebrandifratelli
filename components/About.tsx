@@ -36,7 +36,7 @@ export default function About() {
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               Somos uma empresa especializada em oferecer soluções integradas para o crescimento 
-              empresarial, combinando expertise em licitações governamentais, advocacia empresarial 
+              empresarial, combinando expertise em licitações governamentais, direito previdenciário 
               e desenvolvimento de sistemas personalizados.
             </p>
             

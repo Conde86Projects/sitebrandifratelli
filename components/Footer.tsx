@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'luc
 const footerLinks = {
   services: [
     { name: 'Licitações Governamentais', href: '/licitacoes' },
-    { name: 'Advocacia Empresarial', href: '/advocacia' },
+    { name: 'Direito Previdenciário', href: '/advocacia' },
     { name: 'Desenvolvimento de Sistemas', href: '/sistemas' },
     { name: 'Brandi Labs', href: '/brandi-labs' },
   ],
@@ -46,7 +46,7 @@ export default function Footer() {
               Brandi Fratelli
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Especialistas em licitações governamentais, advocacia empresarial e desenvolvimento 
+              Especialistas em licitações governamentais, direito previdenciário e desenvolvimento 
               de sistemas personalizados. Transformando desafios em oportunidades desde 2008.
             </p>
             
