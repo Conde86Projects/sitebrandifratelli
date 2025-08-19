@@ -44,3 +44,39 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Logo padrão para páginas */
+.logo-page {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* Logo pequeno para componentes */
+.logo-small {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* Logo médio para seções */
+.logo-medium {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  border-radius: 6px;
+  background: transparent;
+}

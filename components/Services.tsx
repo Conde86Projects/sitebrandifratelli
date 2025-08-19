@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Gavel, Scale, Code, Smartphone } from 'lucide-react'
+import Image from 'next/image'
+import { Gavel, Code, Smartphone } from 'lucide-react'
 
 const services = [
   {
@@ -12,7 +13,7 @@ const services = [
   {
     title: 'Direito Previdenciário',
     description: 'Especialistas em aposentadorias, benefícios INSS, pensões e planejamento previdenciário.',
-    icon: Scale,
+    icon: 'logo',
     href: '/advocacia',
     color: 'from-green-500 to-green-600'
   },
@@ -54,7 +55,17 @@ export default function Services() {
             >
               <div className="p-6">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <service.icon size={32} className="text-white" />
+                  {service.icon === 'logo' ? (
+                     <Image
+                       src="/images/logo-advogado.svg"
+                       alt="Logo Advocacia"
+                       width={28}
+                       height={28}
+                       className="text-white filter brightness-0 invert"
+                     />
+                   ) : (
+                     <service.icon size={32} className="text-white" />
+                   )}
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-brandi-blue transition-colors">

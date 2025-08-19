@@ -256,6 +256,28 @@ git reset --hard <hash-do-commit>
 
 ## 📝 Documentação de Mudanças
 
+### **Histórico de Atualizações Recentes**
+
+#### **2024-01-20: Implementação do Logo Brandi Fratello**
+
+**Mudanças Realizadas:**
+- ✅ **Página Advocacia**: Substituído ícone Scale por `logo-advogado.svg` (120x120px)
+- ✅ **Card Home - Direito Previdenciário**: Substituído ícone Scale por `logo-advogado.svg` (28x28px)
+- ✅ **CSS Global**: Adicionadas classes `.logo-page`, `.logo-medium`, `.logo-small` para padronização
+- ✅ **Otimizações**: Aplicados filtros CSS para compatibilidade com fundos coloridos
+
+**Arquivos Modificados:**
+- `components/Services.tsx` - Substituição do ícone no card
+- `app/advocacia/page.tsx` - Implementação do logo na página
+- `app/globals.css` - Classes de estilização do logo
+- `public/images/` - Adição dos arquivos `logo-advogado.png` e `logo-advogado.svg`
+
+**Benefícios:**
+- Identidade visual consistente da marca Brandi Fratello
+- Logo em formato SVG para qualidade perfeita
+- Padronização de tamanhos para diferentes contextos
+- Melhoria na apresentação profissional
+
 ### **Template de Commit**
 ```bash
 # ✅ Commits descritivos

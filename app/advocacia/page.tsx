@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Scale, FileText, Users, Award, CheckCircle, Building, Briefcase, Shield } from 'lucide-react'
+import Image from 'next/image'
 
 export default function AdvocaciaPage() {
   const services = [
@@ -65,7 +66,13 @@ export default function AdvocaciaPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <Scale className="text-brandi-blue mx-auto mb-6" size={64} />
+            <Image 
+              src="/images/logo-advogado.svg" 
+              alt="Logo Brandi Fratelli Advocacia" 
+              width={64} 
+              height={64} 
+              className="logo-page mx-auto mb-6"
+            />
             <h1 className="text-5xl font-bold text-brandi-dark mb-6">
               Brandi Fratelli <span className="gradient-text">Advocacia</span>
             </h1>
