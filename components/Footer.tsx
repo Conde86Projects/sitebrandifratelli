@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 const footerLinks = {
@@ -42,8 +43,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-brandi-gold mb-4 block">
-              Brandi Fratelli
+            <Link href="/" className="mb-4 block">
+              <Image
+                 src="/images/rodape-labs.svg"
+                 alt="Brandi Fratelli"
+                 width={240}
+                 height={56}
+                 className="h-14 w-auto"
+               />
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Especialistas em licitações governamentais, direito previdenciário e desenvolvimento 

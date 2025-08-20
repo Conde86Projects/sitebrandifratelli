@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Brandi Fratelli - Licitações, Sistemas e Advocacia',
   description: 'Especialistas em licitações governamentais, desenvolvimento de sistemas e serviços jurídicos especializados.',
   keywords: 'licitações, sistemas, advocacia, governo, flutter, aplicativos',
+  icons: {
+    icon: '/images/logo-flaicon.svg',
+    shortcut: '/images/logo-flaicon.svg',
+    apple: '/images/logo-flaicon.svg',
+  },
 }
 
 export default function RootLayout({

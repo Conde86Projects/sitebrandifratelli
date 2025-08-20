@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Smartphone, Palette, Zap, Users, Star, Code2, Layers, Rocket } from 'lucide-react'
+import Image from 'next/image'
 
 export default function BrandiLabsPage() {
   const features = [
@@ -82,11 +83,13 @@ export default function BrandiLabsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-2xl">
-                <Smartphone className="text-white" size={64} />
-              </div>
-            </div>
+            <Image
+              src="/images/logo-brandi-Labs.svg" 
+              alt="Logo Brandi Labs" 
+              width={64} 
+              height={64} 
+              className="logo-page mx-auto mb-6"
+            />
             <h1 className="text-5xl font-bold text-brandi-dark mb-6">
               <span className="gradient-text">Brandi Labs</span>
               <br />Inovação Mobile

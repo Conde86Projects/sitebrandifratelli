@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420.708" height="249.756" viewBox="0 0 420.708 249.756">
+  <defs>
+    <linearGradient id="linear-gradient" y1="-0.058" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.117" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x2="0.782" y2="0.697" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.31"/>
+      <stop offset="1" stop-opacity="0.812"/>
+    </linearGradient>
+    <filter id="Caminho_2">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feFlood result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.211" y1="-0.499" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.127" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="-0.058" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-0.349" y1="-0.264" x2="0.782" y2="0.697" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(-203.292 -162.244)">
+    <g id="Grupo_3" data-name="Grupo 3">
+      <g id="Camada_4" data-name="Camada 4" transform="translate(233.047 162.244)">
+        <path id="Caminho_1" data-name="Caminho 1" d="M37,.5H397.292V109.321A114.935,114.935,0,0,1,282.357,224.256h-130.6A114.755,114.755,0,0,1,37,109.509Z" transform="translate(-37 -0.5)" fill="url(#linear-gradient)"/>
+        <g data-type="innerShadowGroup">
+          <path id="Caminho_2-2" data-name="Caminho 2" d="M656.41,400.65v63.442a74.608,74.608,0,0,1-74.634,74.6h-1.092v40.961L544,538.694H455.274a70.444,70.444,0,0,1-70.444-70.436V400.65Z" transform="translate(-339.321 -355.899)" fill="url(#linear-gradient-2)"/>
+          <g transform="matrix(1, 0, 0, 1, -29.76, 0)" filter="url(#Caminho_2)">
+            <path id="Caminho_2-3" data-name="Caminho 2" d="M656.41,400.65v63.442a74.608,74.608,0,0,1-74.634,74.6h-1.092v40.961L544,538.694H455.274a70.444,70.444,0,0,1-70.444-70.436V400.65Z" transform="translate(-309.56 -355.9)" fill="#fff"/>
+          </g>
+        </g>
+        <path id="Caminho_3" data-name="Caminho 3" d="M514.17,602.57" transform="translate(-363.231 -393.226)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+      <g id="Camada_2" data-name="Camada 2" transform="translate(319.86 241.924)">
+        <path id="Caminho_7" data-name="Caminho 7" d="M22.824,0A22.824,22.824,0,1,1,0,22.824,22.824,22.824,0,0,1,22.824,0Z" fill="#fff"/>
+        <circle id="Elipse_2" data-name="Elipse 2" cx="22.824" cy="22.824" r="22.824" transform="translate(142.649)" fill="#fff"/>
+        <path id="Caminho_4" data-name="Caminho 4" d="M224.5,159.25h55.429A24.454,24.454,0,0,1,255.475,183.7h-6.521A24.454,24.454,0,0,1,224.5,159.25Z" transform="translate(-158.474 -109.526)" fill="#fff"/>
+      </g>
+      <g id="Camada_3" data-name="Camada 3" transform="translate(203.292 206.058)">
+        <path id="Caminho_5" data-name="Caminho 5" d="M771.13,399.5l-1.63,70.917,22.824-4.076a57.484,57.484,0,0,0,0-61.951L771.13,399.5" transform="translate(-380.675 -399.5)" fill="url(#linear-gradient-3)"/>
+        <path id="Caminho_6" data-name="Caminho 6" d="M322.749,399.5l1.63,70.917-22.824-4.076a57.484,57.484,0,0,1,0-61.951l21.194-4.891" transform="translate(-292.496 -399.5)" fill="url(#linear-gradient-4)"/>
+      </g>
+      <rect id="Retângulo_19" data-name="Retângulo 19" width="129" height="25" rx="10" transform="translate(349 387)" fill="url(#linear-gradient-5)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="842.708" height="286" viewBox="0 0 842.708 286">
+  <defs>
+    <filter id="Caminho_2">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feFlood result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.05" x2="1.084" y2="1.095" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1488cc"/>
+      <stop offset="1" stop-color="#2b32b2"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-180.292 -456)">
+    <g id="rh2" transform="translate(180.292 487.244)">
+      <g id="Camada_4" data-name="Camada 4" transform="translate(29.756)">
+        <path id="Caminho_1" data-name="Caminho 1" d="M37,.5H397.292V109.321A114.935,114.935,0,0,1,282.357,224.256h-130.6A114.755,114.755,0,0,1,37,109.509Z" transform="translate(-37 -0.5)" fill="#fff"/>
+        <g data-type="innerShadowGroup">
+          <path id="Caminho_2-2" data-name="Caminho 2" d="M656.41,400.65v63.442a74.608,74.608,0,0,1-74.634,74.6h-1.092v40.961L544,538.694H455.274a70.444,70.444,0,0,1-70.444-70.436V400.65Z" transform="translate(-339.321 -355.899)" fill="#111"/>
+          <g transform="matrix(1, 0, 0, 1, -29.76, -31.24)" filter="url(#Caminho_2)">
+            <path id="Caminho_2-3" data-name="Caminho 2" d="M656.41,400.65v63.442a74.608,74.608,0,0,1-74.634,74.6h-1.092v40.961L544,538.694H455.274a70.444,70.444,0,0,1-70.444-70.436V400.65Z" transform="translate(-309.56 -324.65)" fill="#fff"/>
+          </g>
+        </g>
+        <path id="Caminho_3" data-name="Caminho 3" d="M514.17,602.57" transform="translate(-363.231 -393.226)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+      <g id="Camada_2" data-name="Camada 2" transform="translate(116.568 79.68)">
+        <path id="Caminho_7" data-name="Caminho 7" d="M22.824,0A22.824,22.824,0,1,1,0,22.824,22.824,22.824,0,0,1,22.824,0Z" fill="#fff"/>
+        <circle id="Elipse_2" data-name="Elipse 2" cx="22.824" cy="22.824" r="22.824" transform="translate(142.649)" fill="#fff"/>
+        <path id="Caminho_4" data-name="Caminho 4" d="M224.5,159.25h55.429A24.454,24.454,0,0,1,255.475,183.7h-6.521A24.454,24.454,0,0,1,224.5,159.25Z" transform="translate(-158.474 -109.526)" fill="#fff"/>
+      </g>
+      <g id="Camada_3" data-name="Camada 3" transform="translate(0 43.814)">
+        <path id="Caminho_5" data-name="Caminho 5" d="M771.13,399.5l-1.63,70.917,22.824-4.076a57.484,57.484,0,0,0,0-61.951L771.13,399.5" transform="translate(-380.675 -399.5)" fill="#fff"/>
+        <path id="Caminho_6" data-name="Caminho 6" d="M322.749,399.5l1.63,70.917-22.824-4.076a57.484,57.484,0,0,1,0-61.951l21.194-4.891" transform="translate(-292.496 -399.5)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="Brandi_Labs_" data-name="Brandi
+Labs
+" transform="translate(616 456)" fill="#fff" font-size="90" font-family="RoundedMplus1c-Bold, 'Rounded Mplus \31 c'" font-weight="700"><tspan x="0" y="97">Brandi</tspan><tspan x="0" y="177">Labs</tspan><tspan x="0" y="257"></tspan></text>
+    <circle id="Elipse_3" data-name="Elipse 3" cx="7.5" cy="7.5" r="7.5" transform="translate(822 618)" fill="#fff"/>
+    <rect id="Retângulo_1" data-name="Retângulo 1" width="90" height="13" rx="6.5" transform="translate(725 647)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
