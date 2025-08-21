@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { Code, Database, Zap, Shield, Monitor, Cloud, Cog, Users } from 'lucide-react'
+import ChatWidget from '../../components/ChatWidget'
+import { chatConfigs } from '../../lib/chatConfig'
 
 export default function SistemasPage() {
   const technologies = [
@@ -202,6 +204,9 @@ export default function SistemasPage() {
           </motion.div>
         </div>
       </section>
+      
+      {/* Chat Widget */}
+      <ChatWidget config={chatConfigs.sistemas} />
     </div>
   )
 }

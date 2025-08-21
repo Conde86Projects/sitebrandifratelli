@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { Scale, FileText, Users, Award, CheckCircle, Building, Briefcase, Shield } from 'lucide-react'
 import Image from 'next/image'
+import ChatWidget from '../../components/ChatWidget'
+import { chatConfigs } from '../../lib/chatConfig'
 
 export default function AdvocaciaPage() {
   const services = [
@@ -222,6 +224,9 @@ export default function AdvocaciaPage() {
           </motion.div>
         </div>
       </section>
+      
+      {/* Chat Widget */}
+      <ChatWidget config={chatConfigs.advocacia} />
     </div>
   )
 }
