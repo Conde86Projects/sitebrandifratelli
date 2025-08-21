@@ -25,12 +25,6 @@ export default function LicitacoesPage() {
       stats: '200+ pregões vencidos'
     },
     {
-      icon: Search,
-      title: 'Tomada de Preços',
-      description: 'Análise detalhada e estratégias para tomadas de preços',
-      stats: '95% taxa de sucesso'
-    },
-    {
       icon: Award,
       title: 'Concorrências Públicas',
       description: 'Experiência em grandes concorrências governamentais',
@@ -38,9 +32,15 @@ export default function LicitacoesPage() {
     },
     {
       icon: TrendingUp,
-      title: 'Convites e Dispensas',
-      description: 'Assessoria em processos de menor complexidade',
+      title: 'Dispensas de Licitação',
+      description: 'Assessoria em processos de dispensa e inexigibilidade',
       stats: '100% aprovação'
+    },
+    {
+      icon: Search,
+      title: 'Registro de Preços',
+      description: 'Estratégias para atas de registro de preços',
+      stats: '95% taxa de sucesso'
     }
   ]
 
@@ -58,10 +58,10 @@ export default function LicitacoesPage() {
       result: 'Primeiro colocado - Obra em andamento'
     },
     {
-      title: 'Tomada de Preços - Serviços de TI',
+      title: 'Registro de Preços - Serviços de TI',
       value: 'R$ 1.8 milhões',
       description: 'Modernização de sistemas governamentais',
-      result: 'Contrato renovado por mais 2 anos'
+      result: 'Ata vigente - Contrato renovado por mais 2 anos'
     }
   ]
 
@@ -82,7 +82,7 @@ export default function LicitacoesPage() {
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Especialistas em licitações públicas com mais de 5 anos de experiência. 
-              Aumentamos suas chances de sucesso em pregões, concorrências e tomadas de preços.
+              Aumentamos suas chances de sucesso em pregões, concorrências e registros de preços.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

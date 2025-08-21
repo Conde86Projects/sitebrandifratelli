@@ -258,6 +258,30 @@ git reset --hard <hash-do-commit>
 
 ### **Histórico de Atualizações Recentes**
 
+#### **2024-01-20: Correção de Modo Escuro e Melhorias Visuais**
+
+**Mudanças Realizadas:**
+- ✅ **Correção Modo Escuro**: Forçado modo claro para compatibilidade total
+- ✅ **Inputs Sempre Visíveis**: Background branco e texto escuro garantidos
+- ✅ **Título com Gradiente**: "Brandi Fratelli" com gradiente azul-roxo
+- ✅ **Rodapé Atualizado**: Copyright alterado para 2025
+- ✅ **Licitações Atualizadas**: Removidas modalidades obsoletas (Tomada de preço, Carta convite)
+- ✅ **CSS Global**: Regras !important para garantir visibilidade
+- ✅ **Placeholders**: Cores adequadas para todos os inputs
+
+**Arquivos Modificados:**
+- `app/globals.css` - Correções de modo escuro e forçar modo claro
+- `components/Hero.tsx` - Gradiente azul-roxo no título principal
+- `components/Footer.tsx` - Copyright atualizado para 2025
+- `app/licitacoes/page.tsx` - Remoção de modalidades obsoletas
+
+**Benefícios:**
+- Site sempre visível independente do tema do dispositivo
+- Identidade visual moderna com gradiente no título
+- Informações atualizadas e precisas sobre licitações
+- Compatibilidade total com dispositivos móveis e desktop
+- Experiência consistente para todos os usuários
+
 #### **2024-01-20: Sistema de Chat Personalizado por Segmento**
 
 **Mudanças Realizadas:**

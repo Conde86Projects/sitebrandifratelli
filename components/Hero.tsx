@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-brandi-dark mb-6">
-              <span className="gradient-text">Brandi Fratelli</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Brandi Fratelli</span>
               <br />
               Excelência em Negócios
             </h1>
