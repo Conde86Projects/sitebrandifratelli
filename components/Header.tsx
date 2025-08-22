@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
@@ -22,8 +23,17 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold gradient-text">
-            Brandi Fratelli
+          <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/images/Headlogo.svg"
+              alt="Brandi Fratelli Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
+            <span className="text-2xl font-bold gradient-text">
+              Brandi Fratelli
+            </span>
           </Link>
 
           {/* Desktop Menu */}
