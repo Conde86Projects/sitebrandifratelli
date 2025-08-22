@@ -44,23 +44,41 @@ export default function ChatWidget({ config }: ChatWidgetProps) {
     }
 
     setMessages(prev => [...prev, userMessage])
+    const messageText = inputValue
     setInputValue('')
     setIsTyping(true)
 
-    // Simular resposta do bot (depois integrar com N8n)
+    // Enviar para Zoho Flow
+    try {
+      const webhookUrl = process.env.NEXT_PUBLIC_ZOHO_FLOW_WEBHOOK
+      if (webhookUrl) {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: messageText,
+            segment: config.segment,
+            timestamp: new Date().toISOString(),
+            page: window.location.pathname,
+            userAgent: navigator.userAgent
+          })
+        })
+      }
+    } catch (error) {
+      console.error('Erro ao enviar para Zoho Flow:', error)
+    }
+
+    // Simular resposta do bot
     setTimeout(() => {
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: getBotResponse(inputValue, config.segment),
+        text: getBotResponse(messageText, config.segment),
         isUser: false,
         timestamp: new Date()
       }
       setMessages(prev => [...prev, botResponse])
       setIsTyping(false)
     }, 1500)
-
-    // TODO: Integrar com N8n webhook
-    // await sendToN8n(inputValue, config.segment)
   }
 
   const getBotResponse = (userInput: string, segment: string): string => {
