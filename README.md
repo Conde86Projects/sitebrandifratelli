@@ -9,6 +9,7 @@ Site institucional da Brandi Fratelli com sistema de chat inteligente conversaci
 - **🎯 Segmentação Inteligente**: Respostas específicas para Advocacia, Licitações, Brandi Labs e Sistemas
 - **📧 Notificações Automáticas**: Emails profissionais com dados completos para follow-up
 - **📱 Interface Responsiva**: Experiência otimizada para todos os dispositivos
+- **🤖 Página 404 Personalizada**: Mascote robô com animações e navegação intuitiva
 - **🔧 Sistema Próprio**: Sem dependências externas (Zoho Flow, Zapier, N8n)
 
 ## 🛠️ Tecnologias
@@ -29,6 +30,7 @@ Site institucional da Brandi Fratelli com sistema de chat inteligente conversaci
 │   ├── licitacoes/        # Página de licitações
 │   ├── brandi-labs/       # Página Brandi Labs
 │   ├── sistemas/          # Página de sistemas
+│   ├── not-found.tsx      # Página 404 personalizada
 │   └── api/               # API routes
 │       └── send-notification/ # API de envio de emails
 ├── components/            # Componentes React
@@ -42,7 +44,10 @@ Site institucional da Brandi Fratelli com sistema de chat inteligente conversaci
 ├── scripts/               # Scripts utilitários
 │   └── test-smtp.js       # Teste de configuração SMTP
 └── docs/                  # Documentação completa
-    └── integrations/      # Documentação do sistema de chat
+    ├── components/        # Documentação de componentes
+    │   └── 404-page.md    # Página 404 personalizada
+    ├── integrations/      # Documentação do sistema de chat
+    └── roadmap/           # Roadmap de melhorias futuras
 ```
 
 ## ⚙️ Configuração
@@ -109,6 +114,12 @@ http://localhost:3000
 - **📱 Brandi Labs** (`/brandi-labs`): Desenvolvimento de aplicativos Flutter
 - **💻 Sistemas** (`/sistemas`): Desenvolvimento web e sistemas
 - **🏠 Home** (`/`): Direcionamento geral para todas as áreas
+
+### **🤖 Página 404** (`/qualquer-url-inexistente`):
+- **Mascote robô**: Animação de tremida divertida
+- **Navegação útil**: Links para páginas principais
+- **Experiência amigável**: Transforma erro em oportunidade
+- **Design responsivo**: Otimizado para mobile e desktop
 
 ### Dados Capturados
 - **👤 Nome**: Para personalização do atendimento
@@ -200,6 +211,8 @@ Para dúvidas sobre implementação:
 
 Para documentação completa, consulte:
 - **[Sistema de Chat Conversacional](./docs/integrations/intelligent-chat-system.md)**: Guia completo do chat
+- **[Página 404 Personalizada](./docs/components/404-page.md)**: Mascote robô e experiência de erro
+- **[Roadmap de Melhorias](./docs/roadmap/future-improvements.md)**: Plano de evolução do sistema
 - **[Arquitetura do Projeto](./docs/architecture/overview.md)**: Estrutura e organização
 - **[Padrões de Desenvolvimento](./docs/development/coding-standards.md)**: Convenções de código
 - **[Guia de Manutenção](./docs/maintenance/updates.md)**: Atualizações e melhorias
@@ -217,6 +230,8 @@ Para documentação completa, consulte:
 - **Atendimento humanizado** sem custo de pessoal
 - **Segmentação precisa** por área de atuação
 - **Follow-up eficiente** com dados completos
+- **Experiência consistente** mesmo em páginas de erro
+- **Redução de bounce rate** em 404s
 - **ROI positivo** desde o primeiro mês
 
 ## 🤝 Contribuição
