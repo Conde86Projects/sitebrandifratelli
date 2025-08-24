@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { Smartphone, Palette, Zap, Users, Star, Code2, Layers, Rocket } from 'lucide-react'
 import Image from 'next/image'
 import ChatWidget from '../../components/ChatWidget'
-import { chatConfigs } from '../../lib/chatConfig'
 
 export default function BrandiLabsPage() {
   const features = [
@@ -264,7 +263,7 @@ export default function BrandiLabsPage() {
       </section>
       
       {/* Chat Widget */}
-      <ChatWidget config={chatConfigs['brandi-labs']} />
+      <ChatWidget segment="brandi-labs" />
     </div>
   )
 }

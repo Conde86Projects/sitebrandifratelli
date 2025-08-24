@@ -6,7 +6,6 @@ import Services from '../components/Services'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import ChatWidget from '../components/ChatWidget'
-import { chatConfigs } from '../lib/chatConfig'
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       <Contact />
       
       {/* Chat Widget */}
-      <ChatWidget config={chatConfigs.home} />
+      <ChatWidget segment="home" />
     </div>
   )
 }

@@ -48,21 +48,22 @@ export const chatConfigs: Record<string, ChatConfig> = {
   }
 }
 
+export const getChatConfig = (segment: string): ChatConfig => {
+  return chatConfigs[segment] || chatConfigs.home
+}
+
 export const detectSegmentFromPath = (pathname: string): ChatConfig => {
   if (pathname.includes('/advocacia')) {
     return chatConfigs.advocacia
-  }
-  if (pathname.includes('/licitacoes')) {
+  } else if (pathname.includes('/licitacoes')) {
     return chatConfigs.licitacoes
-  }
-  if (pathname.includes('/brandi-labs')) {
+  } else if (pathname.includes('/brandi-labs')) {
     return chatConfigs['brandi-labs']
-  }
-  if (pathname.includes('/sistemas')) {
+  } else if (pathname.includes('/sistemas')) {
     return chatConfigs.sistemas
+  } else {
+    return chatConfigs.home
   }
-  
-  return chatConfigs.home
 }
 
 export const generateSmartResponse = (userInput: string, segment: string): string => {

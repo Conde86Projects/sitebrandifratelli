@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { FileText, Search, Award, TrendingUp, CheckCircle, Target, Users, Clock } from 'lucide-react'
 import ChatWidget from '../../components/ChatWidget'
-import { chatConfigs } from '../../lib/chatConfig'
 
 export default function LicitacoesPage() {
   const services = [
@@ -227,7 +226,7 @@ export default function LicitacoesPage() {
       </section>
       
       {/* Chat Widget */}
-      <ChatWidget config={chatConfigs.licitacoes} />
+      <ChatWidget segment="licitacoes" />
     </div>
   )
 }
