@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="366.227" height="499.89" viewBox="0 0 366.227 499.89">
+  <defs>
+    <linearGradient id="linear-gradient" y1="-0.058" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.117" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x2="0.782" y2="0.697" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.31"/>
+      <stop offset="1" stop-opacity="0.812"/>
+    </linearGradient>
+    <filter id="Caminho_18">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feFlood result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.211" y1="-0.499" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.127" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="-0.058" x2="0.792" y2="1.107" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0" stop-color="#f2f0ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+      <stop offset="1" stop-color="#6e52fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-0.115" y1="-0.177" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.1" stop-color="#f8f7ff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="-0.48" y1="0.178" x2="0.592" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9f9f9"/>
+      <stop offset="1" stop-color="#7054fc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="-0.352" y1="-0.22" x2="0.729" y2="0.949" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#7054fc"/>
+    </linearGradient>
+    <filter id="Caminho_13">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur-2"/>
+      <feFlood result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Caminho_14">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="16" result="blur-3"/>
+      <feFlood result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_5" data-name="Grupo 5" transform="translate(-356.886 -193.375)">
+    <g id="Camada_2" data-name="Camada 2" transform="translate(356.886 193.375)">
+      <g id="Camada_4" data-name="Camada 4" transform="translate(26.612 0)">
+        <path id="Caminho_17" data-name="Caminho 17" d="M38,.5H351.634V95.229A100.051,100.051,0,0,1,251.584,195.28H137.895A99.9,99.9,0,0,1,38,95.392Z" transform="translate(-38 -0.5)" fill="url(#linear-gradient)"/>
+        <g data-type="innerShadowGroup">
+          <path id="Caminho_18-2" data-name="Caminho 18" d="M330.241,55.4v55.227a64.948,64.948,0,0,1-64.948,64.948h-.972v35.649L232.39,175.567H155.152A61.322,61.322,0,0,1,93.83,114.245V55.4Z" transform="translate(-54.214 -16.444)" fill="url(#linear-gradient-2)"/>
+          <g transform="matrix(1, 0, 0, 1, -26.61, 0)" filter="url(#Caminho_18)">
+            <path id="Caminho_18-3" data-name="Caminho 18" d="M330.241,55.4v55.227a64.948,64.948,0,0,1-64.948,64.948h-.972v35.649L232.39,175.567H155.152A61.322,61.322,0,0,1,93.83,114.245V55.4Z" transform="translate(-27.6 -16.44)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Camada_2-2" data-name="Camada 2" transform="translate(107.839 69.411)">
+        <path id="Caminho_19" data-name="Caminho 19" d="M188.567,101.6a4.094,4.094,0,0,0-5.776,0l-11.069,11.077L159.446,100.4a4.08,4.08,0,0,0-5.776,0h0a4.08,4.08,0,0,0,0,5.776l12.276,12.276-11.069,11.069a4.087,4.087,0,0,0,5.776,5.776l11.069-11.069,9.863,9.863a4.087,4.087,0,1,0,5.776-5.776l-9.863-9.863,11.069-11.077a4.08,4.08,0,0,0,0-5.776Z" transform="translate(-152.472 -98.576)" fill="#fff"/>
+        <path id="Caminho_20" data-name="Caminho 20" d="M348.6,100.7a4.08,4.08,0,0,0-5.776,0l-11.069,11.069L319.486,99.512a4.094,4.094,0,0,0-5.776,0h0a4.08,4.08,0,0,0,0,5.776l12.269,12.276L314.909,128.6a4.087,4.087,0,0,0,5.776,5.776l11.069-11.069,9.87,9.87a4.087,4.087,0,0,0,5.776-5.776l-9.87-9.87L348.6,106.466A4.08,4.08,0,0,0,348.6,100.7Z" transform="translate(-198.95 -98.32)" fill="#fff"/>
+      </g>
+      <g id="Camada_3" data-name="Camada 3" transform="translate(0 38.14)">
+        <path id="Caminho_22" data-name="Caminho 22" d="M478.919,54.25,477.5,115.983l19.868-3.548a50.039,50.039,0,0,0,0-53.928L478.919,54.25" transform="translate(-139.027 -54.25)" fill="url(#linear-gradient-3)"/>
+        <path id="Caminho_23" data-name="Caminho 23" d="M26.831,54.25l1.419,61.733L8.382,112.436a50.04,50.04,0,0,1,0-53.928L26.831,54.25" transform="translate(-0.496 -54.25)" fill="url(#linear-gradient-4)"/>
+      </g>
+    </g>
+    <rect id="Retângulo_5" data-name="Retângulo 5" width="54.53" height="7.916" rx="3.958" transform="translate(511.855 313.412)" fill="#fff"/>
+    <g id="rh3" transform="translate(360.39 393.595)">
+      <path id="Caminho_8" data-name="Caminho 8" d="M637.5,560.5v67.74c12.12,9.26,30.11,19.47,51,19.26,12-.12,15-3.59,16-5,5.15-7.49-3.26-21.36-8-29C688.51,600.63,672,579.54,637.5,560.5Z" transform="translate(-347.39 -513.38)" fill="url(#linear-gradient-5)"/>
+      <path id="Caminho_9" data-name="Caminho 9" d="M416.5,560.5v67.74c-12.12,9.26-30.11,19.47-51,19.26-12-.12-15-3.59-16-5-5.15-7.49,3.26-21.36,8-29C365.49,600.63,382,579.54,416.5,560.5Z" transform="translate(-347.39 -513.38)" fill="url(#linear-gradient-6)"/>
+      <path id="Caminho_10" data-name="Caminho 10" d="M620.64,733.68q-8.55,22.41-19.9,38.29c-7.55,10.56-16,18.91-25.3,24.95A103.07,103.07,0,0,1,531,812.6v.45l-.78-.07-1.38-.14-1.37.13-.8.08v-.45a103.069,103.069,0,0,1-44.44-15.68c-18.59-12.09-33.8-33.37-45.2-63.24-26.63-69.8-22.73-159.17-18-206.23v-.4l109.63-13.11h.33l109.63,13.07v.4C642.46,565.31,648.29,661.19,620.64,733.68Z" transform="translate(-347.39 -513.38)" fill="url(#linear-gradient-7)"/>
+      <path id="Caminho_11" data-name="Caminho 11" d="M695.5,782.5" transform="translate(-347.39 -513.38)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="testerh." transform="translate(486 435.64)">
+      <g data-type="innerShadowGroup">
+        <path id="Caminho_13-2" data-name="Caminho 13" d="M352.765,340.267a53.9,53.9,0,1,1,38.115-15.788A53.905,53.905,0,0,1,352.765,340.267Z" transform="translate(-298.765 -232.364)" fill="url(#linear-gradient-2)"/>
+        <g transform="matrix(1, 0, 0, 1, -129.11, -242.26)" filter="url(#Caminho_13)">
+          <path id="Caminho_13-3" data-name="Caminho 13" d="M352.765,340.267a53.9,53.9,0,1,1,38.115-15.788A53.905,53.905,0,0,1,352.765,340.267Z" transform="translate(-169.65 9.9)" fill="#fff"/>
+        </g>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -129.11, -242.26)" filter="url(#Caminho_14)">
+        <path id="Caminho_14-2" data-name="Caminho 14" d="M352.4,232.194a53.645,53.645,0,1,1-20.943,4.229,53.645,53.645,0,0,1,20.943-4.229m0-.194a54,54,0,1,0,54,54A54,54,0,0,0,352.4,232Z" transform="translate(-169.29 10.26)" fill="#fff"/>
+      </g>
+      <circle id="Elipse_4" data-name="Elipse 4" cx="4.856" cy="4.856" r="4.856" transform="translate(89.76 64.781)" fill="#fff"/>
+      <rect id="Retângulo_4" data-name="Retângulo 4" width="56.137" height="7.576" rx="3.788" transform="translate(25.077 80.514)" fill="#fff"/>
+      <path id="Caminho_37" data-name="Caminho 37" d="M15.44-34.56v5.6h9.92a2.289,2.289,0,0,0,1.96-.92A3.352,3.352,0,0,0,28-31.92a2.862,2.862,0,0,0-.64-1.84,2.408,2.408,0,0,0-2-.8Zm0,16.48v4.8h9.92a2.471,2.471,0,0,0,2-.76A2.5,2.5,0,0,0,28-15.68a2.5,2.5,0,0,0-.64-1.64,2.471,2.471,0,0,0-2-.76ZM2.8-23.92V-41.2q0-6.64,6-6.64H30a9.968,9.968,0,0,1,4.8,1.12,9.88,9.88,0,0,1,3.4,2.96,13.668,13.668,0,0,1,2,4.16,16.7,16.7,0,0,1,.68,4.72,15.235,15.235,0,0,1-.52,4,11.842,11.842,0,0,1-1.52,3.44,8.121,8.121,0,0,1-2.56,2.48,7.222,7.222,0,0,1-3.56,1.04,7.968,7.968,0,0,1,5.92,3.88,13.932,13.932,0,0,1,1.92,7.24,17.38,17.38,0,0,1-.64,4.64,12.528,12.528,0,0,1-1.96,4.12,10.446,10.446,0,0,1-3.28,2.92A8.949,8.949,0,0,1,30.16,0H9.12Q2.8,0,2.8-6.64V-23.92ZM59.12-6.64a6.074,6.074,0,0,1-1.96,4.88,6.846,6.846,0,0,1-4.6,1.68,6.846,6.846,0,0,1-4.6-1.68A6.074,6.074,0,0,1,46-6.64V-41.2q0-6.64,6.56-6.64h22.4a6.223,6.223,0,0,1,4.88,1.96A6.767,6.767,0,0,1,81.6-41.2a6.767,6.767,0,0,1-1.76,4.68,6.223,6.223,0,0,1-4.88,1.96H59.12v4H71.76a6.223,6.223,0,0,1,4.88,1.96,6.767,6.767,0,0,1,1.76,4.68,6.767,6.767,0,0,1-1.76,4.68,6.223,6.223,0,0,1-4.88,1.96H59.12Z" transform="translate(16 77.36)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

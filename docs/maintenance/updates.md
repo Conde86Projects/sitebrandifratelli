@@ -196,7 +196,7 @@ docs/components/ComponentName.md
 const companyInfo = {
   phone: "(11) 9999-9999",
   email: "contato@brandifratelli.com.br",
-  address: "São Paulo, SP"
+  address: "Varginha, MG"
 }
 
 // 2. About.tsx - História e valores

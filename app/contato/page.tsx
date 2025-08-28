@@ -118,7 +118,7 @@ export default function ContatoPage() {
                   <MapPin className="text-brandi-gold mr-4" size={24} />
                   <div>
                     <div className="font-semibold text-brandi-dark">Localização</div>
-                    <div className="text-gray-600">São Paulo, SP - Brasil</div>
+                    <div className="text-gray-600">Varginha, MG - Brasil</div>
                   </div>
                 </div>
                 

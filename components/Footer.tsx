@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
 
 const footerLinks = {
   services: [
@@ -32,8 +32,7 @@ const footerLinks = {
 const socialLinks = [
   { name: 'Facebook', icon: Facebook, href: '#' },
   { name: 'Instagram', icon: Instagram, href: '#' },
-  { name: 'LinkedIn', icon: Linkedin, href: '#' },
-  { name: 'Twitter', icon: Twitter, href: '#' },
+  { name: 'X (Twitter)', icon: Twitter, href: '#' },
 ]
 
 export default function Footer() {
@@ -69,7 +68,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-brandi-gold" />
-                <span className="text-gray-300">São Paulo, SP - Brasil</span>
+                <span className="text-gray-300">Varginha, MG - Brasil</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-brandi-gold" />
+                <span className="text-gray-300">Atendimento em todo o Brasil</span>
               </div>
             </div>
           </div>

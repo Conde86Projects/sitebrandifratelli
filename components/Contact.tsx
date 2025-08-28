@@ -82,7 +82,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Endereço</h4>
                   <p className="text-gray-600">
-                    São Paulo, SP - Brasil<br />
+                    Varginha, MG - Brasil<br />
                     Atendimento em todo o Brasil
                   </p>
                 </div>
