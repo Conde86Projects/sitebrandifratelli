@@ -236,10 +236,10 @@ const createTransporter = () => {
 
   // Tentar SendGrid primeiro, Gmail como backup
   try {
-    return nodemailer.createTransporter(primaryConfig)
+    return nodemailer.createTransport(primaryConfig)
   } catch (error) {
     console.log('Erro no SendGrid, usando Gmail como backup:', error)
-    return nodemailer.createTransporter(backupConfig)
+    return nodemailer.createTransport(backupConfig)
   }
 }
 
