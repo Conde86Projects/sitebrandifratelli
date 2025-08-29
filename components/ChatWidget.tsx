@@ -14,6 +14,24 @@ import {
   type ActionButton
 } from '../lib/chatResponses'
 
+// Google Analytics tracking functions
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
+const trackChatEvent = (action: string, step: string, segment?: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', action, {
+      event_category: 'Chat',
+      event_label: step,
+      custom_parameter_1: segment || 'unknown',
+      page_location: window.location.pathname
+    })
+  }
+}
+
 interface Message {
   id: string
   text: string
@@ -98,6 +116,9 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
     setInputValue('')
     setIsTyping(true)
 
+    // Rastrear envio de mensagem
+    trackChatEvent('message_sent', conversationStep, segment)
+
     // Adicionar mensagem do usuário
     const newUserMessage: Message = {
       id: Date.now().toString(),
@@ -138,6 +159,7 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
     } else if (conversationStep === 'asking_name') {
       // Capturar nome
       setContactForm(prev => ({ ...prev, name: userMessage }))
+      trackChatEvent('contact_provided', 'name', segment)
       setTimeout(() => {
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
@@ -152,6 +174,7 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
     } else if (conversationStep === 'asking_phone') {
       // Capturar telefone
       setContactForm(prev => ({ ...prev, phone: userMessage }))
+      trackChatEvent('contact_provided', 'phone', segment)
       setTimeout(() => {
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
@@ -170,9 +193,11 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
         email: userMessage
       }
       setContactForm(finalContactForm)
+      trackChatEvent('contact_provided', 'email', segment)
       
       // Enviar notificação com todos os dados
       await sendNotification(selectedAction, undefined, finalContactForm)
+      trackChatEvent('conversion_completed', 'full_contact_data', segment)
       
       setTimeout(() => {
         const botMessage: Message = {
@@ -195,6 +220,9 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
     
     setSelectedAction(actionId)
     setShowActions([])
+    
+    // Rastrear seleção de opção
+    trackChatEvent('option_selected', actionId, segment)
     
     // Adicionar mensagem do usuário clicando na ação
     const actionButton = getActionButtons(config.segment).find(btn => btn.id === actionId)
@@ -241,7 +269,15 @@ export default function ChatWidget({ segment }: ChatWidgetProps) {
         transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
       >
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            const wasOpen = isOpen
+            setIsOpen(!isOpen)
+            
+            if (!wasOpen) {
+              // Rastrear abertura do chat
+              trackChatEvent('chat_opened', 'initial', segment)
+            }
+          }}
           className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110`}
           style={{ backgroundColor: config.color }}
         >
