@@ -1,0 +1,77 @@
+{
+  "name": "Brandi Fratelli - Licitações, Sistemas e Advocacia",
+  "short_name": "Brandi Fratelli",
+  "description": "Especialistas em licitações governamentais, desenvolvimento de sistemas e serviços jurídicos especializados",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["business", "productivity", "government"],
+  "icons": [
+    {
+      "src": "/images/logo-flaicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Headlogo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/Headlogo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Licitações",
+      "short_name": "Licitações",
+      "description": "Especialistas em licitações governamentais",
+      "url": "/licitacoes",
+      "icons": [{
+        "src": "/images/logo-flaicon.svg",
+        "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "Sistemas",
+      "short_name": "Sistemas",
+      "description": "Desenvolvimento de sistemas web",
+      "url": "/sistemas",
+      "icons": [{
+        "src": "/images/logo-flaicon.svg",
+        "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "Advocacia",
+      "short_name": "Advocacia",
+      "description": "Serviços jurídicos especializados",
+      "url": "/advocacia",
+      "icons": [{
+        "src": "/images/logo-flaicon.svg",
+        "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "Brandi Labs",
+      "short_name": "Labs",
+      "description": "Desenvolvimento de aplicativos mobile",
+      "url": "/brandi-labs",
+      "icons": [{
+        "src": "/images/logo-flaicon.svg",
+        "sizes": "96x96"
+      }]
+    }
+  ]
+}
