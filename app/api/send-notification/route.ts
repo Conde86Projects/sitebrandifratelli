@@ -204,8 +204,8 @@ const EMAIL_TEMPLATES = {
 
 // Configuração do transporter de email
 const createTransporter = () => {
-  // Configuração principal (SendGrid)
-  const primaryConfig = {
+  // Configuração original (SendGrid/Zoho)
+  const config = {
     host: process.env.SMTP_HOST || 'smtp.sendgrid.net',
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: false,
@@ -215,32 +215,15 @@ const createTransporter = () => {
     }
   }
 
-  // Configuração de backup (Gmail)
-  const backupConfig = {
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'conde86projects@gmail.com',
-      pass: process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS
-    }
-  }
-
   // Log das configurações (sem mostrar senhas)
   console.log('=== CONFIGURAÇÃO SMTP ===')
-  console.log('Host:', primaryConfig.host)
-  console.log('Port:', primaryConfig.port)
-  console.log('User:', primaryConfig.auth.user)
-  console.log('Pass configurada:', !!primaryConfig.auth.pass)
+  console.log('Host:', config.host)
+  console.log('Port:', config.port)
+  console.log('User:', config.auth.user)
+  console.log('Pass configurada:', !!config.auth.pass)
   console.log('=========================')
 
-  // Tentar SendGrid primeiro, Gmail como backup
-  try {
-    return nodemailer.createTransport(primaryConfig)
-  } catch (error) {
-    console.log('Erro no SendGrid, usando Gmail como backup:', error)
-    return nodemailer.createTransport(backupConfig)
-  }
+  return nodemailer.createTransport(config)
 }
 
 export async function POST(request: NextRequest) {
@@ -288,84 +271,42 @@ export async function POST(request: NextRequest) {
     console.log('Timestamp:', templateData.timestamp)
     console.log('==========================')
     
-    // Envio real de email
-    try {
-      const transporter = createTransporter()
-      console.log('=== ENVIANDO EMAILS ===')
-      console.log('From:', process.env.SMTP_FROM || 'noreply@brandifratelli.com.br')
-      console.log('To:', emailConfig.to)
-      console.log('Subject:', emailConfig.subject)
-      console.log('=======================')
-      
-      const emailPromises = emailConfig.to.map(async (email) => {
-        try {
-          console.log(`Enviando para: ${email}`)
-          const result = await transporter.sendMail({
-            from: process.env.SMTP_FROM || 'Brandi Fratelli <noreply@brandifratelli.com.br>',
-            to: email,
-            subject: emailConfig.subject,
-            html: htmlContent
-          })
-          console.log(`✅ Email enviado para ${email}:`, result.messageId)
-          return result
-        } catch (emailError) {
-          console.error(`❌ Erro ao enviar para ${email}:`, emailError)
-          throw emailError
-        }
-      })
-      
-      const results = await Promise.all(emailPromises)
-      console.log('✅ Todos os emails enviados com sucesso!')
-
-      return NextResponse.json({
-        success: true,
-        message: 'Notificações enviadas com sucesso',
-        segment,
-        recipients: emailConfig.to,
-        data: templateData,
-        emailResults: results.map(r => r.messageId)
-      })
-    } catch (emailError) {
-      console.error('❌ Erro no envio de emails:', emailError)
-      
-      // Tentar com Gmail como backup
+    // Envio de email via SendGrid/Zoho
+    const transporter = createTransporter()
+    console.log('=== ENVIANDO EMAILS ===')
+    console.log('From:', process.env.SMTP_FROM || 'noreply@brandifratelli.com.br')
+    console.log('To:', emailConfig.to)
+    console.log('Subject:', emailConfig.subject)
+    console.log('=======================')
+    
+    const emailPromises = emailConfig.to.map(async (email) => {
       try {
-        console.log('🔄 Tentando com Gmail como backup...')
-        const backupTransporter = nodemailer.createTransport({
-          host: 'smtp.gmail.com',
-          port: 587,
-          secure: false,
-          auth: {
-            user: 'conde86projects@gmail.com',
-            pass: process.env.GMAIL_APP_PASSWORD || 'sua-senha-de-app'
-          }
+        console.log(`Enviando para: ${email}`)
+        const result = await transporter.sendMail({
+          from: process.env.SMTP_FROM || 'Brandi Fratelli <noreply@brandifratelli.com.br>',
+          to: email,
+          subject: emailConfig.subject,
+          html: htmlContent
         })
-        
-        const backupPromises = emailConfig.to.map(email => 
-          backupTransporter.sendMail({
-            from: 'Brandi Fratelli <conde86projects@gmail.com>',
-            to: email,
-            subject: emailConfig.subject,
-            html: htmlContent
-          })
-        )
-        
-        await Promise.all(backupPromises)
-        console.log('✅ Emails enviados via Gmail backup!')
-        
-        return NextResponse.json({
-          success: true,
-          message: 'Notificações enviadas via Gmail (backup)',
-          segment,
-          recipients: emailConfig.to,
-          data: templateData,
-          method: 'gmail-backup'
-        })
-      } catch (backupError) {
-        console.error('❌ Erro também no Gmail backup:', backupError)
-        throw backupError
+        console.log(`✅ Email enviado para ${email}:`, result.messageId)
+        return result
+      } catch (emailError) {
+        console.error(`❌ Erro ao enviar para ${email}:`, emailError)
+        throw emailError
       }
-    }
+    })
+    
+    const results = await Promise.all(emailPromises)
+    console.log('✅ Todos os emails enviados com sucesso!')
+
+    return NextResponse.json({
+      success: true,
+      message: 'Notificações enviadas com sucesso via SendGrid/Zoho',
+      segment,
+      recipients: emailConfig.to,
+      data: templateData,
+      emailResults: results.map(r => r.messageId)
+    })
     
   } catch (error) {
     console.error('Erro ao processar notificação:', error)
