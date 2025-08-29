@@ -331,7 +331,7 @@ export async function POST(request: NextRequest) {
       // Tentar com Gmail como backup
       try {
         console.log('🔄 Tentando com Gmail como backup...')
-        const backupTransporter = nodemailer.createTransporter({
+        const backupTransporter = nodemailer.createTransport({
           host: 'smtp.gmail.com',
           port: 587,
           secure: false,
