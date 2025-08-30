@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.brandifratelli.com.br'),
   title: 'Brandi Fratelli - Licitações, Sistemas e Advocacia | Especialistas em Governo',
   description: 'Especialistas em licitações governamentais, desenvolvimento de sistemas web e mobile, e serviços jurídicos especializados. Atendemos todo o Brasil com soluções completas.',
   keywords: 'licitações, pregões, sistemas web, advocacia, governo, flutter, aplicativos mobile, desenvolvimento, direito previdenciário, INSS, concorrências públicas',
