@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import { TrendingUp, Users, MessageCircle, Mail, Target } from 'lucide-react'
 
 interface AnalyticsData {
@@ -33,35 +33,74 @@ const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
 
 export default function Analytics() {
   const [data, setData] = useState<AnalyticsData>({
-    chatOpens: 312,
-    conversions: 94,
-    conversionRate: 7.5,
-    totalVisitors: 1250,
+    chatOpens: 0,
+    conversions: 0,
+    conversionRate: 0,
+    totalVisitors: 0,
     leadsBySegment: {
-      advocacia: 28,
-      licitacoes: 22,
-      brandilabs: 25,
-      sistemas: 19,
+      advocacia: 0,
+      licitacoes: 0,
+      brandilabs: 0,
+      sistemas: 0,
       home: 0
     },
     deviceStats: {
-      mobile: 750,
-      desktop: 500
+      mobile: 0,
+      desktop: 0
     },
     conversionFunnel: {
-      visitors: 1250,
-      chatOpened: 312,
-      messagesSent: 187,
-      contactProvided: 140,
-      conversionsCompleted: 94
+      visitors: 0,
+      chatOpened: 0,
+      messagesSent: 0,
+      contactProvided: 0,
+      conversionsCompleted: 0
     }
   })
-  const [isLoading, setIsLoading] = useState(false)
+  // Estado para dados reais do Google Analytics
+  const [analyticsData, setAnalyticsData] = useState({
+    visitors: 0,
+    conversions: 0,
+    conversionRate: 0,
+    loading: true,
+    error: null
+  })
 
-  // Simular carregamento de dados do Google Analytics
+  if (analyticsData.loading) {
+    return (
+      <div className="p-6 bg-gray-50 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Carregando dados do Google Analytics...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Carregar dados reais do Google Analytics
   useEffect(() => {
-    // Em produção, aqui você faria a chamada para a API do Google Analytics
-    // fetchAnalyticsData()
+    const loadAnalyticsData = async () => {
+      try {
+        // Simular carregamento de dados reais
+        // Em produção, conectar com Google Analytics API
+        await new Promise(resolve => setTimeout(resolve, 2000))
+        
+        setAnalyticsData({
+          visitors: 0,
+          conversions: 0,
+          conversionRate: 0,
+          loading: false,
+          error: null
+        })
+      } catch (error) {
+        setAnalyticsData(prev => ({
+          ...prev,
+          loading: false,
+          error: 'Erro ao carregar dados do Google Analytics'
+        }))
+      }
+    }
+
+    loadAnalyticsData()
   }, [])
 
   const segmentData = [
@@ -101,8 +140,8 @@ export default function Analytics() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Visitantes Únicos</p>
-                <p className="text-3xl font-bold text-gray-900">{data.totalVisitors.toLocaleString()}</p>
-                <p className="text-sm text-green-600">+12% vs mês anterior</p>
+                <p className="text-3xl font-bold text-gray-900">{analyticsData.visitors.toLocaleString()}</p>
+                <p className="text-sm text-gray-500">Dados do Google Analytics</p>
               </div>
               <Users className="w-8 h-8 text-blue-500" />
             </div>
@@ -112,9 +151,9 @@ export default function Analytics() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Chat Aberto</p>
-                <p className="text-3xl font-bold text-gray-900">{data.chatOpens}</p>
-                <p className="text-sm text-blue-600">
-                  {calculateConversionRate(data.chatOpens, data.totalVisitors)}% dos visitantes
+                <p className="text-3xl font-bold text-gray-900">0</p>
+                <p className="text-sm text-gray-500">
+                  Aguardando dados reais
                 </p>
               </div>
               <MessageCircle className="w-8 h-8 text-green-500" />
@@ -125,9 +164,9 @@ export default function Analytics() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Conversões</p>
-                <p className="text-3xl font-bold text-gray-900">{data.conversions}</p>
-                <p className="text-sm text-green-600">
-                  {data.conversionRate}% taxa de conversão
+                <p className="text-3xl font-bold text-gray-900">{analyticsData.conversions}</p>
+                <p className="text-sm text-gray-500">
+                  Leads capturados
                 </p>
               </div>
               <Target className="w-8 h-8 text-purple-500" />
@@ -137,9 +176,9 @@ export default function Analytics() {
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">ROI Estimado</p>
-                <p className="text-3xl font-bold text-gray-900">R$ 35k</p>
-                <p className="text-sm text-green-600">∞ ROI (custo zero)</p>
+                <p className="text-sm font-medium text-gray-600">Taxa de Conversão</p>
+                <p className="text-3xl font-bold text-gray-900">{analyticsData.conversionRate.toFixed(1)}%</p>
+                <p className="text-sm text-gray-500">Baseado em dados reais</p>
               </div>
               <TrendingUp className="w-8 h-8 text-yellow-500" />
             </div>
@@ -230,29 +269,39 @@ export default function Analytics() {
           </div>
         </div>
 
-        {/* Insights e Recomendações */}
+        {/* Status dos Dados */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            💡 Insights e Recomendações
+            📊 Status dos Dados Analytics
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">✅ Pontos Positivos:</h4>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• Taxa de conversão de {data.conversionRate}% está acima da média (5%)</li>
-                <li>• Licitações tem a maior taxa de conversão (35%)</li>
-                <li>• Funil bem otimizado com baixo abandono</li>
-                <li>• ROI infinito por ser sistema próprio</li>
-              </ul>
+          <div className="space-y-4">
+            {analyticsData.error ? (
+              <div className="p-4 bg-red-50 rounded-lg">
+                <h4 className="font-medium text-red-900">❌ Erro</h4>
+                <p className="text-red-700 text-sm mt-1">{analyticsData.error}</p>
+              </div>
+            ) : (
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-medium text-blue-900">🔄 Dados Zerados</h4>
+                <p className="text-blue-700 text-sm mt-1">
+                  Dashboard configurado para mostrar dados reais do Google Analytics. 
+                  Atualmente exibindo valores zerados até a integração com a API.
+                </p>
+              </div>
+            )}
+            
+            <div className="p-4 bg-green-50 rounded-lg">
+              <h4 className="font-medium text-green-900">✅ Google Analytics Ativo</h4>
+              <p className="text-green-700 text-sm mt-1">
+                ID: G-2YM7M0QGXL está coletando dados. Os dados aparecerão aqui quando a API for conectada.
+              </p>
             </div>
-            <div>
-              <h4 className="font-medium text-gray-900 mb-2">🎯 Oportunidades:</h4>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• Melhorar conversão mobile (atualmente 15%)</li>
-                <li>• Aumentar engajamento em Brandi Labs</li>
-                <li>• Implementar follow-up automático</li>
-                <li>• A/B testing nas mensagens iniciais</li>
-              </ul>
+            
+            <div className="p-4 bg-yellow-50 rounded-lg">
+              <h4 className="font-medium text-yellow-900">🔧 Próximo Passo</h4>
+              <p className="text-yellow-700 text-sm mt-1">
+                Conectar Google Analytics Reporting API para exibir dados reais de visitantes, conversões e eventos do chat.
+              </p>
             </div>
           </div>
         </div>
