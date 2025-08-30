@@ -78,29 +78,18 @@ export default function Analytics() {
 
   // Carregar dados reais do Google Analytics
   useEffect(() => {
-    const loadAnalyticsData = async () => {
-      try {
-        // Simular carregamento de dados reais
-        // Em produção, conectar com Google Analytics API
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        
-        setAnalyticsData({
-          visitors: 0,
-          conversions: 0,
-          conversionRate: 0,
-          loading: false,
-          error: null
-        })
-      } catch (error) {
-        setAnalyticsData(prev => ({
-          ...prev,
-          loading: false,
-          error: 'Erro ao carregar dados do Google Analytics'
-        }))
-      }
-    }
+    // Simular carregamento rápido - remover delay para evitar loading infinito
+    const timer = setTimeout(() => {
+      setAnalyticsData({
+        visitors: 0,
+        conversions: 0,
+        conversionRate: 0,
+        loading: false,
+        error: null
+      })
+    }, 500) // Apenas 0.5 segundos
 
-    loadAnalyticsData()
+    return () => clearTimeout(timer)
   }, [])
 
   const segmentData = [
