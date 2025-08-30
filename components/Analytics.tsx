@@ -56,41 +56,16 @@ export default function Analytics() {
       conversionsCompleted: 0
     }
   })
-  // Estado para dados reais do Google Analytics
+  // Estado para dados reais do Google Analytics - sem loading
   const [analyticsData, setAnalyticsData] = useState({
     visitors: 0,
     conversions: 0,
     conversionRate: 0,
-    loading: true,
+    loading: false, // Iniciar sem loading
     error: null
   })
 
-  if (analyticsData.loading) {
-    return (
-      <div className="p-6 bg-gray-50 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Carregando dados do Google Analytics...</p>
-        </div>
-      </div>
-    )
-  }
-
-  // Carregar dados reais do Google Analytics
-  useEffect(() => {
-    // Simular carregamento rápido - remover delay para evitar loading infinito
-    const timer = setTimeout(() => {
-      setAnalyticsData({
-        visitors: 0,
-        conversions: 0,
-        conversionRate: 0,
-        loading: false,
-        error: null
-      })
-    }, 500) // Apenas 0.5 segundos
-
-    return () => clearTimeout(timer)
-  }, [])
+  // Remover useEffect desnecessário - dados já inicializados
 
   const segmentData = [
     { name: 'Advocacia', value: data.leadsBySegment.advocacia, color: COLORS[0] },
