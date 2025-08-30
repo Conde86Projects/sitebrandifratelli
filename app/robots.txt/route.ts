@@ -1,30 +1,22 @@
-import { MetadataRoute } from 'next'
+export async function GET() {
+  const robotsTxt = `User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
 
-export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.brandifratelli.com.br'
-  
-  return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/',
-          '/admin/',
-          '/private/',
-        ],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/',
-        ],
-      },
-    ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
-  }
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://www.brandifratelli.com.br/sitemap.xml
+Host: https://www.brandifratelli.com.br`
+
+  return new Response(robotsTxt, {
+    headers: {
+      'Content-Type': 'text/plain',
+    },
+  })
 }
